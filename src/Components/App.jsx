@@ -5,9 +5,12 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 
-import LoginPage from "../LoginPage/LoginPage";
+import { useDispatch, useSelector } from "react-redux";
+import ProtectedRoute from "./ProtectedRoute";
+import LoginPage from "./LoginPage";
+import RegisterPage from "./RegisterPage";
+import Footer from "./Footer";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
@@ -21,14 +24,14 @@ function App() {
       <div>
         <Switch>
           <Redirect exact from="/" to="/login" />
-
+          {/* 
           <Route exact path="/about">
             <AboutPage />
-          </Route>
+          </Route> */}
 
-          <ProtectedRoute exact path="/user">
+          {/* <ProtectedRoute exact path="/user">
             <UserPage />
-          </ProtectedRoute>
+          </ProtectedRoute> */}
 
           <Route exact path="/login">
             {user.id ? (
