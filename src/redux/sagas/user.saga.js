@@ -24,21 +24,8 @@ function* fetchUser() {
   }
 }
 
-function* updateUserHealthInfo(action) {
-  try {
-    axios.put(`/api/user/${action.payload.userId}`, action.payload);
-    yield put({
-      type: "FETCH_USER",
-    });
-  } catch (error) {
-    console.log("Error in update USER HEALTH INFO SAGA", error);
-  }
-}
-
 function* userSaga() {
   yield takeLatest("FETCH_USER", fetchUser);
-
-  yield takeLatest("UPDATE_USER_HEALTH_INFO", updateUserHealthInfo);
 }
 
 export default userSaga;

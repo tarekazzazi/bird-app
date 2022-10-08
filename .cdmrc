@@ -1,5 +1,5 @@
 tabs: ['src/App.jsx']
 live-reload-browser: false
 terminal-one: |
-    yarn install
-    yarn dev
+    yarn run client
+    yarn run start
