@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
-import ProtectedRoute from "./ProtectedRoute";
-import LoginPage from "./LoginPage";
-import RegisterPage from "./RegisterPage";
-import UserPage from "./UserPage/UserPage";
-import Footer from "./Footer";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import LoginPage from "../LoginPage/LoginPage";
+import RegisterPage from "../RegisterPage/RegisterPage";
+import UserPage from "../UserPage/UserPage";
+import Footer from "../Footer/Footer";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);

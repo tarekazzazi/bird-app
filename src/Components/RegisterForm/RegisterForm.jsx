@@ -7,7 +7,6 @@ function RegisterForm() {
 
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
-  console.log("new name is", username);
   const registerUser = (event) => {
     event.preventDefault();
 
